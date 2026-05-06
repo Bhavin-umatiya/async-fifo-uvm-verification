@@ -34,6 +34,8 @@ A complete **Clock Domain Crossing (CDC)** design: an asynchronous FIFO with Gra
                     └──────────────────────────────────────────┘
 ```
 
+![RTL Schematic](docs/schematic.png)
+
 ## Key Design Features
 
 | Feature | Implementation |
