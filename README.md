@@ -105,8 +105,8 @@ A complete **Clock Domain Crossing (CDC)** design: an asynchronous FIFO with Gra
 
 Waveforms from ModelSim showing correct Gray-coded pointer synchronization, full/empty flag generation, and data integrity across clock domains:
 
-![Write Waveform](docs/waveform_write.png)
-![Read Waveform](docs/waveform_read.png)
+![Simulation Waveform — Write and Read Operations](docs/Simulation%20Waveform%20—%20Write%20and%20Read%20Operations.png)
+![Full and Empty Flag Behavior](docs/Full%20and%20Empty%20Flag%20Behavior.png)
 
 ## Project Structure
 
