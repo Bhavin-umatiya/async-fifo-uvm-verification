@@ -130,8 +130,9 @@ async-fifo-uvm-verification/
 │   ├── fifo_env.sv          # UVM environment
 │   └── fifo_test.sv         # Test + sequences
 ├── docs/
-│   ├── waveform_write.png   # Simulation waveform (write side)
-│   └── waveform_read.png    # Simulation waveform (read side)
+│   ├── schematic.png                                   # RTL schematic diagram
+│   ├── Simulation Waveform — Write and Read Operations.png # Simulation waveform (write/read data)
+│   └── Full and Empty Flag Behavior.png                # Simulation waveform (edge cases)
 └── README.md
 ```
 
