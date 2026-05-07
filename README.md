@@ -4,7 +4,7 @@ A complete **Clock Domain Crossing (CDC)** design: an asynchronous FIFO with Gra
 
 ![Verilog](https://img.shields.io/badge/RTL-Verilog-00599C?style=flat-square)
 ![SystemVerilog](https://img.shields.io/badge/Verification-SystemVerilog_UVM-1D459D?style=flat-square)
-![ModelSim](https://img.shields.io/badge/Simulator-ModelSim-00A651?style=flat-square)
+![Vivado](https://img.shields.io/badge/Simulator-Xilinx_Vivado-E3001F?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ---
@@ -103,7 +103,7 @@ A complete **Clock Domain Crossing (CDC)** design: an asynchronous FIFO with Gra
 
 ## Simulation Results
 
-Waveforms from ModelSim showing correct Gray-coded pointer synchronization, full/empty flag generation, and data integrity across clock domains:
+Waveforms from Xilinx Vivado Simulator (XSim) showing correct Gray-coded pointer synchronization, full/empty flag generation, and data integrity across clock domains:
 
 ![Simulation Waveform — Write and Read Operations](docs/Simulation%20Waveform%20—%20Write%20and%20Read%20Operations.png)
 ![Full and Empty Flag Behavior](docs/Full%20and%20Empty%20Flag%20Behavior.png)
@@ -139,19 +139,19 @@ async-fifo-uvm-verification/
 ## How to Run
 
 ```bash
-# ModelSim
-vlib work
-vlog rtl/*.v
-vlog -sv tb/*.sv +incdir+tb
-vsim -novopt fifo_test +UVM_TESTNAME=fifo_test -do "run -all"
+```bash
+# Vivado Simulator (XSim)
+xvlog -sv rtl/*.v tb/*.sv
+xelab -debug typical -top fifo_test -snapshot fifo_snapshot
+xsim fifo_snapshot -gui
 ```
 
 ## Tools Used
 
 - **RTL Design:** Verilog HDL
 - **Verification:** SystemVerilog, UVM 1.2
-- **Simulator:** ModelSim / QuestaSim
-- **Waveform Viewer:** ModelSim Wave
+- **Simulator:** Xilinx Vivado Simulator (XSim)
+- **Waveform Viewer:** Vivado Waveform Viewer (`.wcfg`)
 
 ## Author
 
